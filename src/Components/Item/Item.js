@@ -3,15 +3,14 @@ import { Link } from "react-router-dom";
 import './Item.css'
 
 const Item = (props) => {
-  const { name, id, precio, img } = props;
+  const { name, id, precio, img, detalle } = props;
 
   return (
-    <Link style={{textDecoration:'none',color:'black'}} to={`/item/detail/${id}/${name}`}>
+    <Link style={{textDecoration:'none',color:'black'}} to={`/item/detail/${id}/${name}/${img}/${detalle}/${precio}`}>
       <div className="containerItem">
         <div className="containerItem__prod">
         <img className="img" alt="esto es una imagen" src={img}/>
         <h1>{name}</h1>
-        <h4>{id}</h4>
         <p>{precio}</p>
         </div>
         

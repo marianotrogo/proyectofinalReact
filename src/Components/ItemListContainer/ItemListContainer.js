@@ -30,8 +30,14 @@ const ItemListContainer = () => {
   return (
     <>
         {items.map(({id,name,precio,img,detalle}) => (
-            <Item key={id} id={id} name={name} precio={precio} img={img} detalle={detalle}/>
-        ))}
+            <Item 
+              key={id} 
+              id={id} 
+              name={name} 
+              precio={precio} 
+              img={img} 
+              detalle={detalle}/>
+          ))}
     </>
   )
 }

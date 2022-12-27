@@ -11,6 +11,9 @@
     padding: 5px;
 }
 
+p{
+    font-size: large;
+}
 .img{
     width: 200px;
     height: 200px;
