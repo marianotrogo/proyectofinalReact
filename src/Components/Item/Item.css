@@ -1,7 +1,14 @@
 .containerItem{
     display: flex;
     justify-content: center;
+    flex-direction: row;
     
+}
+
+.containerItem__prod{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
 }
 
 .img{
