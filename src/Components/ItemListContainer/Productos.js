@@ -48,5 +48,21 @@ export const prod = [
       descripcion: "Aqui va la descripcion",
       img: ""
     },
+    {
+      id: 7,
+      name: "Metal Gear Solid 4",
+      category: "Ps3",
+      precio: 3.99,
+      descripcion: "Aqui va la descripcion",
+      img: ""
+    },
+    {
+      id: 8,
+      name: "Far Cry 4",
+      category: "PC",
+      precio: 4.99,
+      descripcion: "Aqui va la descripcion",
+      img: ""
+    },
   
   ]
