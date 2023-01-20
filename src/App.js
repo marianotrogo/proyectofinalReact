@@ -13,9 +13,11 @@ function App() {
       <Router>
         <Navbar/>
         <Routes>
-          <Route path='/'/>
-          <Route path='/ItemListContainer' element={<ItemListContainer/>}/>
-          <Route path='/ItemDetailContainer/:id' element={<ItemDetailContainer/>}/>
+          <Route path='/' element={<ItemListContainer/>}/>
+          <Route path='/categoria/:categoryId' element={<ItemListContainer/>}/>
+          <Route path='/' element={<ItemListContainer/>}/>
+          <Route path='/item/detail/:id' element={<ItemDetailContainer/>}/>
+          <Route path=''/>
           <Route path='/Cart' element={<Cart/>}/>
         </Routes>
       </Router>

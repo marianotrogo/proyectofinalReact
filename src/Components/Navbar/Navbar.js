@@ -23,7 +23,13 @@ const Navbar = () => {
                 <NavLink className="nav-link" to="/ItemListContainer">Productos</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link">Pricing</NavLink>
+                <NavLink className="nav-link" to="/categoria/Ps4">PS4</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/categoria/Ps3">PS3</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/categoria/PC">PC</NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/cart"><Cartwidget/></NavLink>
