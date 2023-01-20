@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const ItemDetail = ({data}) => {
   return (
     <>
-    <Link >
+    <Link to={`/detail/${data.id}`}>
         <div>
             <div>
                 <img src={data.img} alt="" /> 

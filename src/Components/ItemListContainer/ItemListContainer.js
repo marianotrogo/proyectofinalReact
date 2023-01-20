@@ -18,7 +18,7 @@ export const ItemListContainer = () => {
     });
 
     if (categoryId){
-    getData.then(res => setData(res.filter(film => film.category === categoryId)));
+    getData.then(res => setData(res.filter(prod => prod.category === categoryId)));
     }else{
       getData.then(res => setData(res));
     }
