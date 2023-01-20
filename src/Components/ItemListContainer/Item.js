@@ -7,7 +7,7 @@ const Item = ({product}) => {
 
   return (
     <>
-    <Link>
+    <Link to={`/detail/${product.id}`}>
       <h3>{product.name}</h3>
       <p>{product.descripcion}</p>
       <p>Categoria: {product.category}</p>
