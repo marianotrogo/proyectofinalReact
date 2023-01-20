@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import ItemDetail from './ItemDetail'
 import { prod } from '../ItemListContainer/Productos';
 import { useParams } from 'react-router-dom';
@@ -6,22 +6,22 @@ import { useParams } from 'react-router-dom';
 const ItemDetailContainer = () => {
 
   const [data, setData] = useState([]);
-  const {detailId} = useParams();
+  const { detailId } = useParams();
 
   useEffect(() => {
-    const getData = new Promise(resolve=>{
+    const getData = new Promise(resolve => {
       setTimeout(() => {
-          resolve(prod)
+        resolve(prod)
       }, 2000);
     });
-    getData.then(res=>setData(res.find(prod => prod.id === detailId)));
-  }, [])
-  
+    getData.then(res => setData(res.find(prod => prod.id === parseInt( detailId))));
+  }, [detailId])
+
 
 
 
   return (
-    <ItemDetail data={data}/>
+    <ItemDetail data={data} />
   )
 }
 
