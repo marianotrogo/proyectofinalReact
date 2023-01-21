@@ -9,7 +9,7 @@ const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
-         
+
           <NavLink className="navbar-brand" >Tienda Game</NavLink>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -19,9 +19,7 @@ const Navbar = () => {
               <li className="nav-item">
                 <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/ItemListContainer">Productos</NavLink>
-              </li>
+
               <li className="nav-item">
                 <NavLink className="nav-link" to="/categoria/Ps4">PS4</NavLink>
               </li>
@@ -32,12 +30,12 @@ const Navbar = () => {
                 <NavLink className="nav-link" to="/categoria/PC">PC</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/cart"><Cartwidget/></NavLink>
+                <NavLink className="nav-link" to="/cart"><Cartwidget /></NavLink>
               </li>
             </ul>
           </div>
         </div>
-      
+
       </nav>
     </>
 
