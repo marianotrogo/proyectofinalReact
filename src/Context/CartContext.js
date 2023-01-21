@@ -1,5 +1,5 @@
 import React,{useState, useContext} from 'react'
-const CartContext = React.createContext([]);
+const CartContext = React.createContext();
 
 export const useCartContext = () => useContext(CartContext);
 
@@ -21,7 +21,8 @@ const CartProvider = ({Children}) => {
 
 
   return (
-    <CartContext.Provider value={{
+    <CartContext.Provider value=
+    {{
       limpiarCart,
       isInCart,
       removeProduct,
