@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { Spinner } from 'react-bootstrap';
-import { products } from '../mock/products';
+import { products } from './Productos';
 import ItemDetail from './ItemDetail';
 import {useParams} from 'react-router-dom'
+import Spinner from './Spinner';
 
 
 const ItemDetailContainer = () => {

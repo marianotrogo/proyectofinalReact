@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { Spinner } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
-import { products } from '../mock/products';
-import ItemList from '../ItemList'
+import { products } from './Productos';
+import ItemList from './ItemList'
+import Spinner from './Spinner';
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);

@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react'
-import { Image } from 'react-bootstrap'
 import {Link} from 'react-router-dom'
-import { CartContext } from '../context/cartContext';
+import { CartContext } from '../Context/CartContext';
 import ItemCount from './ItemCount';
 
 
@@ -17,27 +16,24 @@ const ItemDetail = ({details}) => {
   return (
     <div className='row m-auto'>
         <div className='col-12 col-md-6 text-center'>
-            <Image
-             variant="top" 
-             src={details.imagen}
-             alt={details.categoria}
-             width={500}
-             height={400}
+            <img 
+              src={details.img}
+              style={{width: '300px'}}
             />
         </div>
-        <div className='col-12 col-md-6'>
-        <h1>Artículo {details.nombre}</h1>
-        <h3>Categoría: {details.categoria}</h3>
-        <h3>Precio: $ {details.precio}</h3>
-        <h4>Descripción: {details.descripcion}</h4>
-        <h4>Stock: {details.stock}</h4>
+        <div className=' col-12 col-md-6'>
+        <h1 className='card-title'>{details.name}</h1>
+        <h3>Categoría: {details.category}</h3>
+        <h3 className='card-text'>Precio: $ {details.precio}</h3>
+        <p className='card-text'>Descripción: {details.descripcion}</p>
+        <h4 className='text-primary'>Stock: {details.stock}</h4>
         {cantidad === 0 ? (
                     <ItemCount stock={details.stock} initial={1} onAdd={onAdd} />
                 ) : (
-                    <Link to="/cart">Ir al carrito</Link>
+                    <Link className='btn btn-warning' to="/cart">Ir al carrito</Link>
                     )}
                     <br/>
-                    <Link to="/">Seguir comprando</Link>
+                    <Link className='btn btn-danger' to="/">Seguir comprando</Link>
         </div>
     </div>
   )
