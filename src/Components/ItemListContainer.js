@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import { products } from './Productos';
+// import { products } from './Productos';
 import ItemList from './ItemList'
 import Spinner from './Spinner';
 import useFirebase from '../Hooks/useFirebase';
@@ -12,7 +12,7 @@ const ItemListContainer = () => {
   const { productos, getCollection, getProduct, producto } = useFirebase();
 
   useEffect(() => {
-    setLoading(true)
+    // setLoading(true)
     getCollection();
   }, [])
   
