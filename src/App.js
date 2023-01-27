@@ -8,13 +8,14 @@ import Cart from './Components/Cart/Cart';
 
 
 function App() {
+
   return (
     <Provider>
     <BrowserRouter>
       <Navbar/>      
       <Routes>
           <Route path="/" element={<ItemListContainer/>}/>
-          <Route path="/categoria/:categoryId" element={<ItemListContainer/>}/>
+          <Route path="/categoria/:categoriaId" element={<ItemListContainer/>}/>
           <Route path="/details/:id" element={<ItemDetailContainer/>}/>
           <Route path="/Cart" element={<Cart/>} />
       </Routes>

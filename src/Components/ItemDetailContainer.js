@@ -3,6 +3,7 @@ import { products } from './Productos';
 import ItemDetail from './ItemDetail';
 import {useParams} from 'react-router-dom'
 import Spinner from './Spinner';
+import useFirebase from '../Hooks/useFirebase';
 
 
 const ItemDetailContainer = () => {

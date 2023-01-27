@@ -8,7 +8,6 @@ const Provider = (props) => {
     const [suma, setSuma] = useState(0)
 
     const totalCart = () => {
-        // const suma = cart.reduce((a, b) => (a.stock * a.precio + b.stock * b.precio))
         let  suma = 0
         cart.forEach(item => suma += (item.precio * item.stock));
         setSuma(suma)
@@ -21,7 +20,6 @@ const Provider = (props) => {
 
     const addToCart = (item, cantidad) => {
         if (isInCart(item.id)) {
-            // alert('Ya está en el carrito');
             cart.map(product => {
                 if(product.id === item.id){
                     product.cantidad = cantidad
