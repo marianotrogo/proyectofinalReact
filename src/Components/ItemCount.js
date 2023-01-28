@@ -4,9 +4,6 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     const [count, setCount] = useState(initial);
 
     const restar = () => {
-        /* if (count > initial) {
-            setCount(count - 1);
-        } */
 
         count > initial && setCount(count - 1);
     };
@@ -17,9 +14,6 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         }
     };
 
-    /*     const agregar = () =>{
-        onAdd(count)
-    } */
 
     return (
         <div className="counter">

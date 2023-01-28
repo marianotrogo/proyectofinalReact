@@ -7,7 +7,7 @@ import useFirebase from '../Hooks/useFirebase';
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const { categoriaId } = useParams();
   const { productos, getCollection, getProduct, producto } = useFirebase();
 
@@ -16,6 +16,11 @@ const ItemListContainer = () => {
     getCollection();
   }, [])
   
+  
+  useEffect(() => {
+    setItems(productos)
+    setLoading(false)
+  }, [productos])
   
 
 

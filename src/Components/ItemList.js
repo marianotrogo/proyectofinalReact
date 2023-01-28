@@ -1,9 +1,8 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Item from './Item';
 
 
 const ItemList = ({items}) => {
-  
   
 
   return (
