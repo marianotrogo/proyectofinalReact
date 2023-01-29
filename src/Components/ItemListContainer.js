@@ -5,32 +5,39 @@ import Spinner from './Spinner';
 import useFirebase from '../Hooks/useFirebase';
 
 
-const ItemListContainer = (id) => {
+const ItemListContainer = () => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const { categoriaId} = useParams();
-  const { productos, getCollection, filtroCategoria, filterProducto } = useFirebase();
+  const { productos, getCollection, filtroCategoria } = useFirebase();
 
 
   useEffect(() => {
    
-    setLoading(true);
+   setLoading(true)
     getCollection();
     
    
-  }, [])
-
+  }, []);
 
   useEffect(() => {
-    const prodFiltrados = productos.filter(
-      (productos) => productos.categoria === categoriaId
-    );
-
-    !categoriaId ? setItems(productos) : setItems(prodFiltrados)
-    
-
+    setItems(productos)
     setLoading(false)
-  }, [categoriaId])
+  }, [productos])
+  
+  
+  // useEffect(() => {
+    
+  //   const prodFiltrados = productos.filter(
+  //     (productos) => productos.categoria === categoriaId
+  //     );
+      
+      
+  //   !categoriaId ? setItems(productos) : setItems(prodFiltrados)
+    
+  
+  //   setLoading(false)
+  // }, [categoriaId])
 
 
 
@@ -63,6 +70,7 @@ const ItemListContainer = (id) => {
         </Spinner>
         : <ItemList items={items} />
       }
+        
     </div>
   )
 }
