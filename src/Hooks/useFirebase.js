@@ -35,22 +35,23 @@ const useFirebase = () => {
     }
   };
 
-  const filtroProducto = async (categoria) =>{
-    const f = query(collection(db,"productos"), where('categoria', '==', categoria));
+  const filtroCategoria = async (categoria) =>{
+    const f = query(collection(db,'productos'), where('categoria', '==', categoria));
     const querySnapshot = await getDocs(f);
     const filtered = [];
     querySnapshot.forEach(async(doc)=>{
-      const objeto = {id: doc.id, ...doc.data()};
+      const objeto = {categoria: doc.categoria, ...doc.data()};
       filtered.push(objeto);
     });
     setFilterProducto([...filtered]);
+    
   }
 
   return {
     productos,
     getCollection,
     getProduct,
-    filtroProducto,
+    filtroCategoria,
     filterProducto,
     producto
   }

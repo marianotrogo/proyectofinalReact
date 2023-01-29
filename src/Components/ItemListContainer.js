@@ -1,27 +1,37 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-// import { products } from './Productos';
 import ItemList from './ItemList'
 import Spinner from './Spinner';
 import useFirebase from '../Hooks/useFirebase';
 
-const ItemListContainer = () => {
+
+const ItemListContainer = (id) => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
-  const { categoriaId } = useParams();
-  const { productos, getCollection, getProduct, producto } = useFirebase();
+  const { categoriaId} = useParams();
+  const { productos, getCollection, filtroCategoria, filterProducto } = useFirebase();
+
 
   useEffect(() => {
-    // setLoading(true)
+   
+    setLoading(true);
     getCollection();
+    
+   
   }, [])
-  
-  
+
+
   useEffect(() => {
-    setItems(productos)
+    const prodFiltrados = productos.filter(
+      (productos) => productos.categoria === categoriaId
+    );
+
+    !categoriaId ? setItems(productos) : setItems(prodFiltrados)
+    
+
     setLoading(false)
-  }, [productos])
-  
+  }, [categoriaId])
+
 
 
   // useEffect(() => {
