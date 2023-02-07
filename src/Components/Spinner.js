@@ -3,9 +3,8 @@ import './Style/Spinner.css'
 
 const Spinner = () => {
   return (
-    <div className="loader-container">
-        <div className="spinner"></div>
-        <img className="spinner-logo"  alt="" />
+    <div class="spinner-grow text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
     </div>
   )
 }

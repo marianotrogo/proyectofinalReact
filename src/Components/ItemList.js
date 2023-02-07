@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Spinner from './Spinner';
 import Item from './Item';
 import useFirebase from '../Hooks/useFirebase'
+import './Style/ItemList.css'
 
 const ItemList = () => {
 
@@ -15,7 +16,7 @@ const ItemList = () => {
         <section className='products'>
             {catalogo.length < 1}
             {loading && <Spinner />}
-            <div className="products__container">
+            <div className="containerProduct col-12 col-md-6">
                 {!loading && catalogo.length > 0 ? filter.map(({ id, name, descripcion, precio, categoria, img, alt, stock }, index) => (
                     <Item
                         id={id}
