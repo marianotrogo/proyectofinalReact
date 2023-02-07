@@ -35,15 +35,15 @@ const ItemCount = (item) => {
         setIrACarrito(true);
         onAddProducto(item, quantity)
     }
-    
+
     return (
         <>
-            <div className='detail__itemcount'>
-                <div className='detail__count'>
-                    <div className='detail__contador'>
-                        <button disabled={count <= 1} onClick={decrease} className='counter__b'> - </button>
-                        <h4 className='counter__h'>{count}</h4>
-                        <button disabled={count >= stock} onClick={increase} className='counter__b'> + </button>
+            <div className='itemCounDetail'>
+                <div className='countDetail'>
+                    <div className='contadorDetail'>
+                        <button disabled={count <= 1} onClick={decrease} className='signoCounter'> - </button>
+                        <h4 className='counterText'>{count}</h4>
+                        <button disabled={count >= stock} onClick={increase} className='signoCounter'> + </button>
                     </div>
                     <button
                         disabled={stock <= 0}
@@ -54,9 +54,9 @@ const ItemCount = (item) => {
                 </div>
                 {
                     irACarrito ?
-                        <div className='cart__buttons'>
-                            <Link onClick={() => navigate(-1)} item={item}><button className='btn__cart--count btn__checkout'>Volver a comprar</button></Link>
-                            <Link to='/cart' item={item}><button className='btn__cart--count '>Terminar compra</button></Link>
+                        <div className='buttonCart'>
+                            <Link onClick={() => navigate(-1)} item={item}><button className='btnCartCount checkOutButton'>Volver a comprar</button></Link>
+                            <Link to='/cart' item={item}><button className='btnCartCount '>Finalizar compra</button></Link>
                         </div>
                         : null
                 }

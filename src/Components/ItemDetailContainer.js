@@ -9,7 +9,7 @@ import './Style/Itemdetailcontainer.css'
 const ItemDetailContainer = () => {
 
     const { id } = useParams()
-    const { getProductos, catalogo, loading} = useFirebase()
+    const { getProductos, catalogo, loading } = useFirebase()
 
 
     useEffect(() => {
@@ -25,15 +25,14 @@ const ItemDetailContainer = () => {
 
     return (
         <>
-            <section className='products__container'>
+            <section className='containerProd'>
                 {loading && <Spinner/>}
-                    {filter.map(({id, name, stock, descripcion, descriptiondetail, categoria, precio, img}, index) => (
+                    {filter.map(({id, name, stock, descripcion, categoria, precio, img}, index) => (
                         <div className='containerDetail'>
                             <ItemDetail
                             key={index}
                             id={id}
                             name={name} 
-                            descriptiondetail={descriptiondetail}
                             descripcion={descripcion}
                             precio={precio}
                             img={img}

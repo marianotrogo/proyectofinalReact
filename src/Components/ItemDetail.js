@@ -9,22 +9,20 @@ const ItemDetail = (item) => {
 	return (
 		<>
 			<Link to='/' className='link-success backHome'>Regresar al Home</Link>
-			<section className="detail__box">
+			<section className="boxDetail">
 				<img src={img} alt={name || "Imagen del producto"} width={250} height={'auto'} />
-				<div className='detail__description description'>
-					<ul className='description__main main'>
-						<li className='card-title'>
+				<div className='descripcionDetail description'>
+					<ul className='mainDescription main'>
+						<li className='titleCard'>
 							<h3>{name}</h3>
-							<span className='card-text detail__category'>Categoria: {categoria}</span>
+							<span className='card-text categoryDetail'>Categoria: {categoria}</span>
 						</li>
-						<li className='detail__body body'>
+						<li className='bodyDetail body'>
 							<h3 className='body__h3'>Descripción</h3>
 							<p className='card-text body__description'>{descripcion}</p><br />
-
 						</li>
-						<li className='detail__price'>
-							<p className='text__offer_price'>ARS ${precio}</p>
-
+						<li className='priceDetail'>
+							<p>USD ${precio}</p>
 						</li>
 					</ul>
 					<ItemCount item={item} />

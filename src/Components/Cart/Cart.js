@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { CartContext } from '../../Context/CartContext'
 import ItemCart from './ItemCart'
 import '../Style/cart.css'
-// import Form from './Form'
 
 const Cart = (item) => {
     const { carrito, totalCompra } = useContext(CartContext)
@@ -37,7 +36,6 @@ const Cart = (item) => {
                             <span> USD $ {totalCompra()}</span>
                         </p>
                     </div>
-                    {/* <Form/> */}
                 </section>
             </div>
         </>
